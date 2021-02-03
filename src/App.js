@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from "react";
+// components
+import Form from "./components/Form";
+import TodoList from "./components/TodoList";
 
 function App() {
+  // inputText gets the text collected by setInputText
+  const [inputText, setInputText] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Adri <code>loves</code> Isa :)
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <header>
+        <h1>Todo List {inputText}</h1>
+    </header>
+    <Form setInputText={setInputText} />
+    <TodoList />
     </div>
   );
 }
