@@ -12,6 +12,7 @@ const Form = ({ todos, setTodos, inputText, setInputText }) => {
       {
         text: inputText,
         completed: false,
+        isFadingOut: false,
         id: Math.floor(Math.random() * 1000),
       },
     ]);
